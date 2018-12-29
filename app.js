@@ -9,6 +9,8 @@ app.use(express.static(path.join(__dirname, '/public')))
 
 app.get('/', (req, res, next) => res.render('index'))
 
+app.get('/site', (req, res, next) => res.sendFile(path.join(__dirname, '/public/bigger_picture/index.html')))
+
 const PORT = process.env.PORT || 3000
 app.listen(
   PORT

@@ -1,0 +1,430 @@
+var NavLink = React.createClass({
+  render() {
+    var classInput = "nav-link nav-link-desktop";
+    if (this.props.mobileMode == "open") {
+      classInput = "nav-link nav-link-drop-open";
+    }
+    //console.log(this.props.mobileMode);
+    return (
+      <div className="isThisIt">
+        <a href="#">
+          <div className={classInput}>
+            <p>{this.props.text}</p>
+          </div>
+        </a>
+      </div>
+    );
+  }
+});
+
+var Navbar = React.createClass({
+  getInitialState() {
+    return {
+      navState: "closed",
+      navHideToggleIcon: "fa fa-angle-down fa-3x",
+      navObject: []
+    };
+  },
+
+  handleClick() {
+    var navState = this.state.navState;
+    var navIcon = this.state.navHideToggleIcon;
+
+    switch (navState) {
+      case "open":
+        navState = "closed";
+        navIcon = "fa fa-angle-down fa-3x";
+        break;
+      case "closed":
+        navState = "open";
+        navIcon = "fa fa-angle-up fa-3x";
+        break;
+      default:
+        break;
+    }
+
+    this.setState({
+      navState: navState,
+      navHideToggleIcon: navIcon
+    });
+  },
+
+  render() {
+    if (this.state.navState == "open") {
+      var iconClass = "drop-link-container link-decoration";
+      //iconClass = "link-decoration";
+    } else {
+      var iconClass = "drop-link-container link-decoration hide";
+      //iconClass = "link-decoration hide";
+    }
+    if (this.props.mobileDesktop == "desktop") {
+      return (
+        <div>
+          <div className="link-decoration desktop-link-container">
+            <NavLink text="About" />
+            <NavLink text="The Data" />
+            <NavLink text="API" />
+            <NavLink text="Network" />
+            <NavLink text="News and Updates" />
+          </div>
+        </div>
+      );
+    } else if (this.props.mobileDesktop == "mobile") {
+      return (
+        <div>
+          <button className="nav-hide-toggle-button" onClick={this.handleClick}>
+            <i className={this.state.navHideToggleIcon} />
+          </button>
+          <div className={iconClass}>
+            <NavLink text="About" mobileMode={this.state.navState} />
+            <NavLink text="The Data" mobileMode={this.state.navState} />
+            <NavLink text="API" mobileMode={this.state.navState} />
+            <NavLink text="Network" mobileMode={this.state.navState} />
+            <NavLink text="News and Updates" mobileMode={this.state.navState} />
+          </div>
+        </div>
+      );
+    }
+  }
+});
+
+var Header = React.createClass({
+  getInitialState() {
+    return {
+      navMode: "desktop",
+      trackTime: "placeholder"
+    };
+  },
+
+  componentDidMount() {
+    this.updateSize();
+    window.addEventListener("resize", this.updateSize);
+    var time = new Date().toLocaleTimeString();
+    console.log(time);
+    this.setState({
+      trackTime: time
+    });
+  },
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateSize);
+  },
+
+  updateSize() {
+    if (window.innerWidth < 764) {
+      this.setState({
+        navMode: "mobile"
+      });
+    } else {
+      this.setState({
+        navMode: "desktop"
+      });
+    }
+  },
+
+  render() {
+    return (
+      <div>
+        <div className="header-container">
+          <div className="header-icon">
+            <a href="#">
+              <img src="https://oddert.github.io/img/logo_no_text.png" />
+            </a>
+          </div>
+          <div className="nav-container">
+            <Navbar mobileDesktop={this.state.navMode} />
+          </div>
+        </div>
+        <p className="refreshTime">Refresh Time: {this.state.trackTime}</p>
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(<Header />, document.getElementById("header"));
+
+var PageOne = React.createClass({
+  getInitialState() {
+    return {
+      style: { height: "700px" }
+    };
+  },
+
+  componentDidMount() {
+    this.updateHeight();
+    window.addEventListener("resize", this.updateHeight);
+  },
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateHeight);
+  },
+
+  updateHeight() {
+    var state = { height: window.innerHeight };
+    this.setState({
+      style: state
+    });
+    return;
+  },
+
+  render() {
+    return (
+      <div>
+        <div className="pageOne" style={this.state.style}>
+          <div className="testHead">
+            <h1>
+              The NGEM<i className="fa fa-trademark" /> Project
+            </h1>
+            <h1>Under Construction...</h1>
+            <i className="fa fa-cog fa-5x fa-spin"></i>
+          </div>
+        </div>
+      </div>
+    );
+  }
+});
+
+var PageTwo = React.createClass({
+  getInitialState() {
+    return {
+      test: "color: red"
+    };
+  },
+
+  render() {
+    return (
+      <div>
+        <div className="pageTwo conatiner-fluid">
+          <div className="pageTwo-block-container">
+            <div className="pageTwo-block pageTwo-text">
+              <p>
+                The NGEM project is a platform for creating long term action for
+                sustainability.
+              </p>
+
+              <p>
+                Utilizing an artificial intelligence network based on the ARIES
+                modeler, the Network for Global Ecomodeling Sustainability
+                Research is a platform for global ecological computational
+                modelling. The Something platform collaboratively connects
+                individuals and organisations for the purpose of research and
+                enacting policy change to push for a fully sustainable future.
+              </p>
+
+              <p>
+                With a global network of researchers, a world-wide ecological
+                map will be constructed and refined providing currently
+                unimaginable research opportunities and the ability to
+                understand, on a regional or global, the impact of policy
+                decision and large scale climate change action.
+              </p>
+
+              <p>
+                For the first time in human history, simulating the ecology of
+                the entire earth will be possible. And it will be open-source.
+              </p>
+            </div>
+
+            <img
+              src="https://oddert.github.io/msc/bigger_picture/img/23972583_10214243150537281_2112592975_n.jpg"
+              className="flow-chart pageTwo-block"
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+});
+
+var PageThree = React.createClass({
+  getInitialState() {
+    return {
+      style: { height: "700px" }
+    };
+  },
+
+  componentDidMount() {
+    this.updateHeight();
+    window.addEventListener("resize", this.updateHeight);
+  },
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateHeight);
+  },
+
+  updateHeight() {
+    var winHeight = window.innerHeight;
+
+    var state = { height: window.innerHeight };
+    state = this.state.style;
+    //this is override for too large
+    /*this.setState({
+      style: state
+    });*/
+    return;
+  },
+
+  render() {
+    return (
+      <div>
+        <div className="pageThree">
+          <div className="pageThree-head">
+            <h1>How do you simulate a planet?</h1>
+          </div>
+
+          <div className="pageThree-mainPs">
+            <p>
+              Lots of things stand in our way of a fully sustainable world, one
+              of which is the cost and expense of organizing and executing large
+              scale ecological engineering projects and the ethical and
+              financial risks they entail.
+            </p>
+            <p>
+              What is needed is some way to simulate entire biomes and the
+              global eco system itself.
+            </p>
+            <p>
+              Now, with the aid of artificial intelligence we have the capacity
+              to do s for the first time ever. And you can help.
+            </p>
+          </div>
+
+          <div className="pageThree-callToAction">
+            <p className="pageThree-callToAction-p">
+              We are always looking for researchers, theoretical and applied to
+              contribute knowledge, data and computational models to connect
+              with others in our mission to understand the global ecological
+              system. With on cost, join our network to build, share and
+              explore. Together.
+            </p>
+            <button className="pageThree-callToAction-button btn btn-default">
+              Find Out More about the Network{" "}
+              <i className="fa fa-angle-right" />
+            </button>
+          </div>
+
+          <p style={{ opacity: "0" }}>.</p>
+        </div>
+      </div>
+    );
+  }
+});
+
+var PageFour = React.createClass({
+  render() {
+    return (
+      <div>
+        <div className="pageFour">
+          <div className="pageFour-head">
+            <h1>Effecting Lasting Change</h1>
+          </div>
+
+          <div className="pageFour-icons-container">
+            <p className="pageFour-icons-title">
+              A sample of the organizations we’ve worked with
+            </p>
+
+            <img
+              src="https://blogs.un.org/wp-content/uploads/2017/03/logo.svg"
+              className="pageFour-icon"
+            />
+            <img
+              src="http://www.peacefulmountain.com/wp-content/uploads/2015/07/EWG-logo.png"
+              className="pageFour-icon"
+            />
+            <img
+              src="https://www.gcint.org/wp-content/uploads/Green%20Cross%20logo.png"
+              className="pageFour-icon"
+            />
+            <img
+              src="https://oddert.github.io/msc/bigger_picture/img/SVNLogo_SPO.jpg"
+              className="pageFour-icon"
+            />
+          </div>
+
+          <div className="pageFour-mainPs">
+            <p>
+              The NGEM network functions in two ways, the first being a network
+              of researchers, scientists and engineers to communicate and
+              integrate their ecological models. The second function is that of
+              creating systemic and political change.
+            </p>
+            <p>
+              We do this by working with regional lobby groups, activists, NGO’s
+              and governments to use our findings and community to provide
+              resources and push for change. Real change.
+            </p>
+            <p>
+              We have already worked with a range of organisations, from tiny
+              teams of less than five all the way up to the UN. We have shown
+              that systemic change is entirely possible with enough
+              determination and the larger our network, the more influence we
+              can collectively have.
+            </p>
+            <button className="btn btn-default pageFour-button">Find Out More about Systemic Sustainability</button>
+            
+          </div>
+          
+          <p>.</p>
+        </div>
+      </div>
+    );
+  }
+});
+
+var Footer = React.createClass({
+  render() {
+    return (
+      <div>
+        <div className="footer-container">
+          
+          <p className="footer-text-one">A website designed and created by Robyn Veitch, Camille Roded, Max Master and Lucas.</p>
+          <p className="footer-text-two"><i className="fa fa-copyright"></i> Copyright <a href='https://oddert.github.io/'>Robyn Veitch</a> 2017 all rights reserved.</p>
+          
+          <div className="footer-links">
+            <p className="footer-link-one">Site map</p>
+            <a href='http://www.un.org/sustainabledevelopment/sustainable-development-goals/' target="_blank"><p className="footer-link-two">United Nations Sustainability Goals</p></a>
+          </div>
+          
+        </div>
+      </div>
+    );
+  }
+});
+
+var Pages = React.createClass({
+  render() {
+    return (
+      <div className="pages">
+        <PageOne />
+        <PageTwo />
+        <PageThree />
+        <PageFour />
+        <Footer />
+      </div>
+    );
+  }
+});
+
+//ReactDOM.render(<Pages />, document.getElementById("pages"));
+
+var Popup = React.createClass({
+  render() {
+    return <div className="initialPopUp" />;
+  }
+});
+
+//ReactDOM.render(<Popup />, document.getElementById('popup'));
+
+var Construction = React.createClass({
+  render() {
+    return (<div>
+        <div className="construct">
+          <PageOne />
+        </div>
+      </div>);
+  }
+});
+
+
+ReactDOM.render(<Construction />, document.getElementById('popup'));
