@@ -11,9 +11,15 @@
     <div class="sites">
       <% sites.forEach(each => { %>
         <div class="site">
-          <h1><%= each.title %></h1>
-          <p><%= each.description %></p>
-          <!-- <img src="each." alt=""> -->
+          <a href="<%= each.local ? each.onsiteURL : each.offsiteURL %>">
+            <figure class="site__thumb">
+              <img src="<%= each.thumbnail %>" alt="<%= each.title %> banner image thumbnail.">
+            </figure>
+            <div class="site__details">
+              <h3 class="site__title"><%= each.title %></h3>
+              <p class="site__description"><%= each.description %></p>
+            </div>
+          </a>
         </div>
       <% }) %>
     </div>
