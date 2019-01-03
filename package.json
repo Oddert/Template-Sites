@@ -1,0 +1,19 @@
+{
+  "name": "template-sites",
+  "version": "1.0.0",
+  "description": "A seriese of site mockups",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oddert/Template-Sites.git"
+  },
+  "author": "Robyn Veitch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oddert/Template-Sites/issues"
+  },
+  "homepage": "https://github.com/Oddert/Template-Sites#readme"
+}
