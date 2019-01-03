@@ -9,7 +9,13 @@
   <body>
     <h1>Robyn Veitch | Template Sites</h1>
     <div class="sites">
-
+      <% sites.forEach(each => { %>
+        <div class="site">
+          <h1><%= each.title %></h1>
+          <p><%= each.description %></p>
+          <!-- <img src="each." alt=""> -->
+        </div>
+      <% }) %>
     </div>
   </body>
 </html>
