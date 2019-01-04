@@ -10,13 +10,18 @@
     <h1>Robyn Veitch | Template Sites</h1>
     <div class="sites">
       <% sites.forEach(each => { %>
-        <div class="site">
+        <div class="site <%= each.classInserts ? each.classInserts : 'small' %>" title="<%= each.title %>">
           <a href="<%= each.local ? each.onsiteURL : each.offsiteURL %>">
-            <figure class="site__thumb">
+            <figure class="site_background">
               <img src="<%= each.thumbnail %>" alt="<%= each.title %> banner image thumbnail.">
             </figure>
+            <div class="site_thumb">
+            <img src="<%= each.thumbnail %>" alt="<%= each.title %> banner image thumbnail.">
+          </div>
             <div class="site__details">
-              <h3 class="site__title"><%= each.title %></h3>
+              <h3 class="site__title">
+                <span><%= each.title %></span>
+              </h3>
               <p class="site__description"><%= each.description %></p>
             </div>
           </a>
