@@ -28,6 +28,15 @@ const sites = [
   },
   {
     local: false,
+    title: 'Sticky Nav',
+    description: 'Sample site from the js30 challenges. GET A BETTER BANNER IMAGE.',
+    offsiteURL: 'https://oddert-30-days-js.glitch.me/24.%20Sticky%20Nav%20Bar',
+    onsiteURL: null,
+    thumbnail: 'https://raw.githubusercontent.com/Oddert/30-days-js/master/screenshots/24.%20Sticky%20Nav%20Bar.PNG',
+    classInserts: 'horizontal'
+  },
+  {
+    local: false,
     title: 'Climber',
     description: 'Sample site not designed by oddert co. plz no sue',
     offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
@@ -52,7 +61,7 @@ const sites = [
     onsiteURL: null,
     thumbnail: 'https://file.mockplus.com/image/2018/02/7525bad1-c663-47ee-8c69-a0d49adef7ae.png',
     classInserts: 'vertical'
-  }
+  },
 ]
 
 module.exports = sites

@@ -8,6 +8,16 @@ body, html {
   box-sizing: border-box;
 }
 
+.main__title {
+  text-align: center;
+}
+
+.main__description {
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
 .sites {
   width: 98vw;
   box-sizing: border-box;
@@ -78,7 +88,7 @@ body, html {
   transform: translateY(200%);
 }
 .sites .site a .site__details:hover {
-  background: linear-gradient(0deg, rgba(1, 1, 1, 0.75), rgba(1, 1, 1, 0.35));
+  background: linear-gradient(0deg, rgba(1, 1, 1, 0.85), rgba(1, 1, 1, 0.55));
 }
 .sites .site a .site__details:hover .site__title {
   text-shadow: none;
