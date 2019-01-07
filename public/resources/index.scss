@@ -68,7 +68,7 @@ a {
     & a {
       height: 100%;
       width: 100%;
-      background: linear-gradient(45deg, rgba(154, 89, 181, .6), rgba(154, 89, 181, .3));
+      background: linear-gradient(45deg, rgba(154, 89, 181, .8), rgba(154, 89, 181, .3));
       position: relative;
       // z-index: -1;
       display: flex;
@@ -148,6 +148,7 @@ a {
           max-width: 90%;
           // object-fit: contain;
           box-shadow: 3px 8px 20px rgba(0,0,0,.3);
+          transform: scale(1.2);
         }
       }
       & .site_background {
