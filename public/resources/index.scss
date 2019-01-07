@@ -148,7 +148,6 @@ a {
           max-width: 90%;
           // object-fit: contain;
           box-shadow: 3px 8px 20px rgba(0,0,0,.3);
-          transform: scale(1.2);
         }
       }
       & .site_background {
@@ -158,6 +157,7 @@ a {
           width: 100%;
           object-fit: cover;
           filter: blur(10px) grayscale(50%);
+          transform: scale(1.2);
         }
       }
       & > * {
