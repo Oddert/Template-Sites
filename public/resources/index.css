@@ -146,7 +146,6 @@ a:active, a :visited {
   max-height: 90%;
   max-width: 90%;
   box-shadow: 3px 8px 20px rgba(0, 0, 0, 0.3);
-  transform: scale(1.2);
 }
 .sites .site a .site_background {
   overflow: hidden;
@@ -156,6 +155,7 @@ a:active, a :visited {
   width: 100%;
   object-fit: cover;
   filter: blur(10px) grayscale(50%);
+  transform: scale(1.2);
 }
 .sites .site a > * {
   flex: 1;
