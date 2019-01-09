@@ -25,6 +25,11 @@ app.get('/site', (req, res, next) => {
   res.sendFile(path.join(__dirname, '/public/bigger_picture/index.html'))
 })
 
+app.get('/sites/:site', (req, res, next) => {
+  console.log(req.params.site)
+  res.render(`${req.params.site}`)
+})
+
 const PORT = process.env.PORT || 3000
 app.listen(
   PORT
