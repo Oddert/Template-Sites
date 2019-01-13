@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Template Sites | Robyn Veitch</title>
     <link rel="stylesheet" href="/resources/css/index.css" />
-    <script type="text/javascript" src="/resources/css/index.js"></script>
     <link rel="icon" type="image/png" href="/faveicon.png">
   </head>
   <body>
@@ -12,8 +11,9 @@
     <h2 class="main__description">Shown here are a series of sites, apps and single web pages to be ‘real’ websites and layout templates, whilst the <a href="https://oddert.github.io/#code_anchor">other projects</a> focus on a particular function and not necessarily a full user facing experience.</h2>
     <div class="sites">
       <% sites.forEach(each => { %>
-        <div class="site <%= each.classInserts ? each.classInserts : 'small' %>" title="<%= each.title %>">
-          <a href="<%= each.local ? each.onsiteURL : each.offsiteURL %>">
+        <div class="site <%= each.classInserts ? each.classInserts : 'small' %>" title="<%= each.title %>" data-id="<%= each._id %>">
+          <!-- <a href="<%= each.local ? each.onsiteURL : each.offsiteURL %>"> -->
+          <a href="">
             <figure class="site_background">
               <img src="<%= each.thumbnail %>" alt="<%= each.title %> banner image thumbnail.">
             </figure>
@@ -30,5 +30,12 @@
         </div>
       <% }) %>
     </div>
+    <div class="details_window__container">
+      <div class="details_window">
+        <h2 class="details_window__title">No title Selected</h2>
+        <p class="details_window__description">No Description yet</p>
+      </div>
+    </div>
   </body>
+  <script type="text/javascript" src="/resources/js/index.js"></script>
 </html>

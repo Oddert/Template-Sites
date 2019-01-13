@@ -30,6 +30,12 @@ app.get('/sites/:site', (req, res, next) => {
   res.render(`${req.params.site}`)
 })
 
+app.get('/api/site/:id', (req, res, next) => {
+  const site = sites.find(e => e._id === req.params.id)
+  if (site) res.status(200).json({ site })
+  else res.status(400).json({ err: 'Not found', site })
+})
+
 const PORT = process.env.PORT || 3000
 app.listen(
   PORT
