@@ -210,6 +210,10 @@ a {
   }
 }
 
+.no_show {
+  display: none;
+}
+
 @media only screen and (min-width: 950px) {
   .sites {
     grid-template-columns: repeat(6, 1fr);

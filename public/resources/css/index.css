@@ -199,6 +199,10 @@ a:active, a :visited {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
 }
 
+.no_show {
+  display: none;
+}
+
 @media only screen and (min-width: 950px) {
   .sites {
     grid-template-columns: repeat(6, 1fr);

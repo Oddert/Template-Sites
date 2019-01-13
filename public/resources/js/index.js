@@ -1,5 +1,7 @@
 
 const sites = document.querySelectorAll('.site')
+const detailsWindow = document.querySelector('.details_window__container')
+const detailWindowButton = document.querySelector('.details_window--close')
 
 function handleDetails (e) {
   e.preventDefault()
@@ -18,7 +20,16 @@ function handleDetails (e) {
 }
 
 function updateDetailWindow (site) {
-  
+
+}
+
+function toggleDetailWindow (e, open=false) {
+  console.log(open)
+  if (open) {
+    detailsWindow.classList.remove('no_show')
+  } else {
+    detailsWindow.classList.add('no_show')
+  }
 }
 
 sites.forEach(each =>
@@ -26,3 +37,4 @@ sites.forEach(each =>
     capture: true
   })
 )
+detailWindowButton.onclick = toggleDetailWindow
