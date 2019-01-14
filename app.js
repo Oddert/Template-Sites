@@ -30,6 +30,10 @@ app.get('/sites/:site', (req, res, next) => {
   res.render(`${req.params.site}`)
 })
 
+app.get('/api/sites', (req, res, next) => {
+  res.status(200).json({ sites })
+})
+
 app.get('/api/site/:id', (req, res, next) => {
   const site = sites.find(e => e._id === req.params.id)
   if (site) res.status(200).json({ site })
