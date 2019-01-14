@@ -2,9 +2,10 @@
 const allSites = document.querySelectorAll('.site')
 
 const detailsWindow = document.querySelector('.details_window__container')
-const detailWindowButton = detailsWindow.querySelector('.details_window--close')
-const detailWindowTitle = detailsWindow.querySelector('.details_window__title')
+const detailsWindowButton = detailsWindow.querySelector('.details_window--close')
+const detailsWindowTitle = detailsWindow.querySelector('.details_window__title')
 const detailsWindowDescription = detailsWindow.querySelector('.details_window__description')
+const detailsWindowImage = detailsWindow.querySelector('.details_window__image')
 
 let sites = []
 
@@ -14,39 +15,29 @@ fetch(`/api/sites`)
 
 function handleDetails (e) {
   e.preventDefault()
-  let pathList = Array.from(e.path)
-  let filteredPathList = pathList.filter(each => {
+  const pathList = Array.from(e.path)
+  const filteredPathList = pathList.filter(each => {
     let thisClassList = Array.from(each.classList || []) || []
     return thisClassList.includes('site')
   })
-  let containerElement = filteredPathList[0]
-  updateDetailWindow(containerElement.dataset.id)
-  console.log(containerElement)
-  // console.log(container)
-  // console.log(container.dataset.id)
-  // fetch(`/api/site/${container.dataset.id}`)
-  // .then(res => res.json())
-  // .then(res => console.log(res))
-
+  const containerElement = filteredPathList[0]
+  updatedetailsWindow(containerElement.dataset.id)
   e.stopPropagation()
 }
 
-function updateDetailWindow (site) {
+function updatedetailsWindow (site) {
   let filteredSites = sites.filter(e => e._id === site)
   let targetSite = filteredSites[0]
-  detailWindowTitle.textContent = targetSite.title
+  detailsWindowTitle.textContent = targetSite.title
   detailsWindowDescription.textContent = targetSite.description
+  detailsWindowImage.src = targetSite.thumbnail
   console.log(targetSite)
-  toggleDetailWindow (null, true)
+  toggledetailsWindow (null, true)
 }
 
-function toggleDetailWindow (e, open=false) {
-  console.log(open)
-  if (open) {
-    detailsWindow.classList.remove('no_show')
-  } else {
-    detailsWindow.classList.add('no_show')
-  }
+function toggledetailsWindow (e, open=false) {
+  if (open) detailsWindow.classList.remove('no_show')
+  else detailsWindow.classList.add('no_show')
 }
 
 allSites.forEach(each =>
@@ -54,4 +45,4 @@ allSites.forEach(each =>
     capture: true
   })
 )
-detailWindowButton.onclick = toggleDetailWindow
+detailsWindowButton.onclick = toggledetailsWindow
