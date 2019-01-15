@@ -4,8 +4,10 @@ const allSites = document.querySelectorAll('.site')
 const detailsWindow = document.querySelector('.details_window__container')
 const detailsWindowButton = detailsWindow.querySelector('.details_window--close')
 const detailsWindowTitle = detailsWindow.querySelector('.details_window__title')
+const detailsWindowTitleText = detailsWindowTitle.querySelector('.details_window__title--text')
 const detailsWindowSubtitle = detailsWindow.querySelector('.details_window__subtitle')
 const detailsWindowDescription = detailsWindow.querySelector('.details_window__description')
+const detailsWindowImageLink = detailsWindow.querySelector('.details_window__image--link')
 const detailsWindowImage = detailsWindow.querySelector('.details_window__image')
 
 let sites = []
@@ -29,7 +31,9 @@ function handleDetails (e) {
 function updatedetailsWindow (site) {
   let filteredSites = sites.filter(e => e._id === site)
   let targetSite = filteredSites[0]
-  detailsWindowTitle.textContent = targetSite.title
+  detailsWindowTitle.href = targetSite.local ? targetSite.onsiteURL : targetSite.offsiteURL
+  detailsWindowImageLink.href = targetSite.local ? targetSite.onsiteURL : targetSite.offsiteURL
+  detailsWindowTitleText.textContent = targetSite.title
   detailsWindowSubtitle.textContent = targetSite.subtitle
   detailsWindowDescription.textContent = targetSite.description
   detailsWindowImage.src = targetSite.thumbnail
