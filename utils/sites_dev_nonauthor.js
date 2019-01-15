@@ -2,6 +2,7 @@ const sites = [
   {
     local: false,
     title: 'Cyclemon',
+    subtitle: 'Sample site not designed by oddert co. plz no sue',
     description: 'Sample site not designed by oddert co. plz no sue',
     offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
     onsiteURL: null,
@@ -12,6 +13,7 @@ const sites = [
   {
     local: false,
     title: 'NGEM Network Site',
+    subtitle: 'Network for Global Environmental Modeling subtitle text.',
     description: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
     offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
     onsiteURL: null,
@@ -22,7 +24,8 @@ const sites = [
   {
     local: false,
     title: 'Cyclemonlongtiltleaaaaaaaaaaa',
-    description: 'Sample site not designed by oddert co. plz no sue',
+    subtitle: 'Sample site not designed by oddert co. plz no sue',
+    description: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
     offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
     onsiteURL: null,
     thumbnail: 'https://file.mockplus.com/image/2018/02/9023e426-e0cf-4bcb-be83-ba6697455afe.png',
@@ -32,7 +35,8 @@ const sites = [
   {
     local: false,
     title: 'Sticky Nav',
-    description: 'Sample site from the js30 challenges. GET A BETTER BANNER IMAGE.',
+    subtitle: 'Sample site from the js30 challenges. GET A BETTER BANNER IMAGE.',
+    description: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
     offsiteURL: 'https://oddert-30-days-js.glitch.me/24.%20Sticky%20Nav%20Bar',
     onsiteURL: null,
     thumbnail: 'https://raw.githubusercontent.com/Oddert/30-days-js/master/screenshots/24.%20Sticky%20Nav%20Bar.PNG',
@@ -42,7 +46,8 @@ const sites = [
   {
     local: false,
     title: 'Climber',
-    description: 'Sample site not designed by oddert co. plz no sue',
+    subtitle: 'Sample site not designed by oddert co. plz no sue',
+    description: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
     offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
     onsiteURL: null,
     thumbnail: 'https://file.mockplus.com/image/2018/02/8ad129ae-4629-420a-b57b-cedd8564ee6f.png',
@@ -52,7 +57,8 @@ const sites = [
   {
     local: false,
     title: 'Climber',
-    description: 'Sample site not designed by oddert co. plz no sue',
+    subtitle: 'Sample site not designed by oddert co. plz no sue',
+    description: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
     offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
     onsiteURL: null,
     thumbnail: 'https://file.mockplus.com/image/2018/02/8ad129ae-4629-420a-b57b-cedd8564ee6f.png',
@@ -62,7 +68,8 @@ const sites = [
   {
     local: false,
     title: 'Alex Buga',
-    description: 'Sample site not designed by oddert co. plz no sue',
+    subtitle: 'Sample site not designed by oddert co. plz no sue',
+    description: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
     offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
     onsiteURL: null,
     thumbnail: 'https://file.mockplus.com/image/2018/02/7525bad1-c663-47ee-8c69-a0d49adef7ae.png',

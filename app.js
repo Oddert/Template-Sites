@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, '/public')))
 
 
 app.get('/', (req, res, next) => {
-  console.log(req.query.mode, !!req.query.mode)
+  // console.log(req.query.mode, !!req.query.mode)
   if (req.query.dev) res.render('index', { sites: devSites })
   else res.render('index', { sites })
 })

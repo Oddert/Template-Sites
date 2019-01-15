@@ -66,6 +66,7 @@ a {
       // transform: scale(1.01);
     }
     & a {
+      cursor: pointer;
       height: 100%;
       width: 100%;
       background: linear-gradient(45deg, rgba(154, 89, 181, .8), rgba(154, 89, 181, .3));
@@ -106,13 +107,13 @@ a {
             transition: all .3s ease;
           }
         }
-        & .site__description {
+        & .site__subtitle {
           flex: 1;
           transition: .3s ease;
           color: #fefdeb;
-          font-size: 12px;
+          font-size: 15px;
           text-shadow: 0px 0px 10px black;
-          padding: 14px 40px;
+          padding: 18px 40px 14px 40px;
           margin: 0;
           transform: translateY(200%);
           white-space: pre-line;
@@ -127,7 +128,7 @@ a {
               transform: translateX(-50%);
             }
           }
-          & .site__description {
+          & .site__subtitle {
             text-shadow: none;
             transform: translateY(0%);
           }
@@ -169,7 +170,7 @@ a {
   }
 }
 
-.sites .site.small a .site__details .site__description {
+.sites .site.small a .site__details .site__subtitle {
   padding: 10px;
 }
 

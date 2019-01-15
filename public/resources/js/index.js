@@ -4,6 +4,7 @@ const allSites = document.querySelectorAll('.site')
 const detailsWindow = document.querySelector('.details_window__container')
 const detailsWindowButton = detailsWindow.querySelector('.details_window--close')
 const detailsWindowTitle = detailsWindow.querySelector('.details_window__title')
+const detailsWindowSubtitle = detailsWindow.querySelector('.details_window__subtitle')
 const detailsWindowDescription = detailsWindow.querySelector('.details_window__description')
 const detailsWindowImage = detailsWindow.querySelector('.details_window__image')
 
@@ -29,9 +30,10 @@ function updatedetailsWindow (site) {
   let filteredSites = sites.filter(e => e._id === site)
   let targetSite = filteredSites[0]
   detailsWindowTitle.textContent = targetSite.title
+  detailsWindowSubtitle.textContent = targetSite.subtitle
   detailsWindowDescription.textContent = targetSite.description
   detailsWindowImage.src = targetSite.thumbnail
-  console.log(targetSite)
+  // console.log(targetSite)
   toggledetailsWindow (null, true)
 }
 
@@ -45,4 +47,9 @@ allSites.forEach(each =>
     capture: true
   })
 )
+
+detailsWindow.addEventListener('click', e => {
+  if (e.target.className === 'details_window__container') toggledetailsWindow(null, false)
+})
+
 detailsWindowButton.onclick = toggledetailsWindow

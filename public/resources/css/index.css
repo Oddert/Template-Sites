@@ -66,6 +66,7 @@ a:active, a :visited {
   z-index: 100;
 }
 .sites .site a {
+  cursor: pointer;
   height: 100%;
   width: 100%;
   background: linear-gradient(45deg, rgba(154, 89, 181, 0.8), rgba(154, 89, 181, 0.3));
@@ -105,13 +106,13 @@ a:active, a :visited {
   margin: 0 auto 0 6px;
   transition: all 0.3s ease;
 }
-.sites .site a .site__details .site__description {
+.sites .site a .site__details .site__subtitle {
   flex: 1;
   transition: 0.3s ease;
   color: #fefdeb;
-  font-size: 12px;
+  font-size: 15px;
   text-shadow: 0px 0px 10px black;
-  padding: 14px 40px;
+  padding: 18px 40px 14px 40px;
   margin: 0;
   transform: translateY(200%);
   white-space: pre-line;
@@ -127,7 +128,7 @@ a:active, a :visited {
   margin-left: 50%;
   transform: translateX(-50%);
 }
-.sites .site a .site__details:hover .site__description {
+.sites .site a .site__details:hover .site__subtitle {
   text-shadow: none;
   transform: translateY(0%);
 }
@@ -163,7 +164,7 @@ a:active, a :visited {
   padding: 0;
 }
 
-.sites .site.small a .site__details .site__description {
+.sites .site.small a .site__details .site__subtitle {
   padding: 10px;
 }
 

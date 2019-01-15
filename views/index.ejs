@@ -13,7 +13,7 @@
       <% sites.forEach(each => { %>
         <div class="site <%= each.classInserts ? each.classInserts : 'small' %>" title="<%= each.title %>" data-id="<%= each._id %>">
           <!-- <a href="<%= each.local ? each.onsiteURL : each.offsiteURL %>"> -->
-          <a href="">
+          <a>
             <figure class="site_background">
               <img src="<%= each.thumbnail %>" alt="<%= each.title %> banner image thumbnail.">
             </figure>
@@ -24,7 +24,7 @@
               <h3 class="site__title">
                 <span><%= each.title %></span>
               </h3>
-              <p class="site__description"><%= each.description %></p>
+              <p class="site__subtitle"><%= each.subtitle %></p>
             </div>
           </a>
         </div>
@@ -34,6 +34,7 @@
       <div class="details_window">
         <button class="details_window--close">✖</button>
         <h2 class="details_window__title">No title Selected</h2>
+        <h3 class="details_window__subtitle">No Description yet</h3>
         <p class="details_window__description">No Description yet</p>
         <img class="details_window__image" src="" alt="" />
       </div>
