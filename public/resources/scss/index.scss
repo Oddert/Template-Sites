@@ -211,9 +211,35 @@ a {
     background: white;
     border-radius: 20px;
     box-shadow: 5px 5px 30px rgba(0,0,0,.3);
+    position: relative;
     & img {
       max-width: 100%;
       max-height: 100%;
+    }
+    & .details_window--close {
+      $button-radius: 50px;
+      width: $button-radius;
+      height: $button-radius;
+      position: absolute;
+      top: -$button-radius;
+      right: -$button-radius;
+      border-radius: 50%;
+      font-size: 20px;
+      background: rgba(255,255,255,1);
+      border: 1px solid rgba(240,240,240,.1);
+      box-shadow: 2px 2px 10px rgba(0,0,0,.1);
+      cursor: pointer;
+      transition: all .2s linear;
+      &:hover {
+        border: 1px solid rgba(170,170,170,.2);
+        box-shadow: 2px 2px 10px rgba(0,0,0,.2);
+        transform: scale(1.01);
+      }
+      &:active {
+        border: 1px solid rgba(150,150,150,.3);
+        box-shadow: 2px 2px 10px rgba(0,0,0,.2);
+        transform: scale(0.98);
+      }
     }
   }
 }
