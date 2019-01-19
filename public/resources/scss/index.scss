@@ -204,7 +204,7 @@ a {
   overflow-y: auto;
   & .details_window {
     // padding: 25px 50px;
-    margin: 10vh 0 0 0;
+    margin: 10vh 0;
     text-align: center;
     width: 80vw;
     // min-height: 60vh;
@@ -214,11 +214,16 @@ a {
     position: relative;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 100px 400px;
+    grid-template-rows: 100px 400px 50px;
     grid-auto-rows: 300px;
-    align-items: flex-start;
+    // align-items: flex-start;
+    align-items: center;
     & .details_window__title {
       grid-column: 1/-1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     & .details_window__image--link {
       grid-column: 1/-4;
@@ -226,11 +231,49 @@ a {
     }
     & .details_window__desc {
       grid-column: 4/-1;
-      padding: 0px 30px;
+      padding: 0px 50px;
+      text-align: left;
+    }
+    & .details_window__link {
+      text-align: center;
+      grid-column: 2 / -2;
+      & p, a {
+        display: inline-block;
+      }
+      & i {
+        opacity: 0;
+        transition: .1s linear;
+      }
+      &:hover {
+        & i {
+          opacity: 1;
+        }
+      }
     }
     & img {
       max-width: 100%;
       max-height: 100%;
+    }
+    & .details_window__table {
+      grid-column: 1 / -1;
+      padding: 0px 50px;
+      & table {
+        border-collapse: collapse;
+        & td, th {
+          border: 1px solid #D5DADC;
+          border: 1px solid #bec3c7;
+        }
+        & th {
+          padding: 10px 50px;
+          font-size: 1.2em;
+        }
+        & td {
+          padding: 10px 50px;
+        }
+        & tr:nth-child(even) {
+          background: #D5DADC;
+        }
+      }
     }
     & .details_window--close {
       $button-radius: 50px;
@@ -271,7 +314,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   .details_window__container {
     & .details_window {
       width: 92vw;
@@ -290,6 +333,9 @@ a {
       }
     }
   }
+}
+
+@media only screen and (max-width: 700px) {
   .main__title {
     margin: 20px 0px;
   }
