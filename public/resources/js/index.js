@@ -1,21 +1,22 @@
 
 const allSites = document.querySelectorAll('.site')
 
-const detailsWindow             = document.querySelector('.details_window__container')
-const detailsWindowButton       = detailsWindow.querySelector('.details_window--close')
-const detailsWindowTitle        = detailsWindow.querySelector('.details_window__title')
-const detailsWindowTitleText    = detailsWindowTitle.querySelector('.details_window__title--text')
-const detailsWindowSubtitle     = detailsWindow.querySelector('.details_window__desc--subtitle')
-const detailsWindowDescription  = detailsWindow.querySelector('.details_window__desc--description')
-const detailsWindowImageLink    = detailsWindow.querySelector('.details_window__image--link')
-const detailsWindowImage        = detailsWindow.querySelector('.details_window__image')
-const detailsWindowLink         = detailsWindow.querySelector('.details_window__link a')
-const detailsWindowLinkText     = detailsWindow.querySelector('.details_window__link a p')
-const detailsWindowTable        = detailsWindow.querySelector('.details_window__table')
-const detailsWindowTableType    = detailsWindowTable.querySelector('.details_window__table--type')
-const detailsWindowTableDate    = detailsWindowTable.querySelector('.details_window__table--date')
-const detailsWindowTablePurpose = detailsWindowTable.querySelector('.details_window__table--purpose')
-const detailsWindowTablePages   = detailsWindowTable.querySelector('.details_window__table--pages')
+const detailsWindow               = document.querySelector('.details_window__container')
+const detailsWindowButton         = detailsWindow.querySelector('.details_window--close')
+const detailsWindowTitle          = detailsWindow.querySelector('.details_window__title')
+const detailsWindowTitleText      = detailsWindowTitle.querySelector('.details_window__title--text')
+const detailsWindowSubtitle       = detailsWindow.querySelector('.details_window__desc--subtitle')
+const detailsWindowDescription    = detailsWindow.querySelector('.details_window__desc--description')
+const detailsWindowImageLink      = detailsWindow.querySelector('.details_window__image--link')
+const detailsWindowImage          = detailsWindow.querySelector('.details_window__image')
+const detailsWindowLink           = detailsWindow.querySelector('.details_window__link a')
+const detailsWindowLinkText       = detailsWindow.querySelector('.details_window__link a p')
+const detailsWindowTable          = detailsWindow.querySelector('.details_window__table')
+const detailsWindowTableType      = detailsWindowTable.querySelector('.details_window__table--type')
+const detailsWindowTableDate      = detailsWindowTable.querySelector('.details_window__table--date')
+const detailsWindowTablePurpose   = detailsWindowTable.querySelector('.details_window__table--purpose')
+const detailsWindowTablePages     = detailsWindowTable.querySelector('.details_window__table--pages')
+const detailsWindowTablePotential = detailsWindowTable.querySelector('.details_window__table--potential')
 
 let sites = []
 
@@ -38,19 +39,20 @@ function handleDetails (e) {
 function updatedetailsWindow (site) {
   let filteredSites = sites.filter(e => e._id === site)
   let targetSite = filteredSites[0]
-  detailsWindowTitle.href               = targetSite.local ? targetSite.onsiteURL : targetSite.offsiteURL
-  detailsWindowImageLink.href           = targetSite.local ? targetSite.onsiteURL : targetSite.offsiteURL
-  detailsWindowTitleText.textContent    = targetSite.title
-  detailsWindowSubtitle.textContent     = targetSite.subtitle
-  detailsWindowDescription.textContent  = targetSite.description
-  detailsWindowImage.src                = targetSite.thumbnail || "https://static.umotive.com/img/product_image_thumbnail_placeholder.png"
-  detailsWindowLink.href                = targetSite.local ? targetSite.onsiteURL : targetSite.offsiteURL
-  detailsWindowLinkText.textContent     = targetSite.local ? targetSite.onsiteURL : targetSite.offsiteURL
+  detailsWindowTitle.href                 = targetSite.local ? targetSite.onsiteURL : targetSite.offsiteURL
+  detailsWindowImageLink.href             = targetSite.local ? targetSite.onsiteURL : targetSite.offsiteURL
+  detailsWindowTitleText.textContent      = targetSite.title
+  detailsWindowSubtitle.textContent       = targetSite.subtitle
+  detailsWindowDescription.textContent    = targetSite.description
+  detailsWindowImage.src                  = targetSite.thumbnail || "https://static.umotive.com/img/product_image_thumbnail_placeholder.png"
+  detailsWindowLink.href                  = targetSite.local ? targetSite.onsiteURL : targetSite.offsiteURL
+  detailsWindowLinkText.textContent       = targetSite.local ? targetSite.onsiteURL : targetSite.offsiteURL
 
-  detailsWindowTableType.textContent    = targetSite.type || "undefined"
-  detailsWindowTableDate.textContent    = targetSite.date || "--:--:--"
-  detailsWindowTablePurpose.textContent = targetSite.madefor || "not specified"
-  detailsWindowTablePages.textContent   = targetSite.pages || "not specified"
+  detailsWindowTableType.textContent      = targetSite.type || "undefined"
+  detailsWindowTableDate.textContent      = targetSite.date || "--:--:--"
+  detailsWindowTablePurpose.textContent   = targetSite.madefor || "not specified"
+  detailsWindowTablePages.textContent     = targetSite.pages || "not specified"
+  detailsWindowTablePotential.textContent = targetSite.usefor || "not specified"
   // console.log(targetSite)
   toggledetailsWindow (null, true)
 }
