@@ -31,7 +31,8 @@ app.get('/sites/:site', (req, res, next) => {
 })
 
 app.get('/api/sites', (req, res, next) => {
-  res.status(200).json({ sites })
+  if (req.query.dev) res.status(200).json({ sites: devSites })
+  else res.status(200).json({ sites })
 })
 
 app.get('/api/site/:id', (req, res, next) => {
