@@ -23,7 +23,7 @@ const sites = [
     date: 'Dec 2018',
     type: 'Static Component Page',
     pages: '1',
-    madefor: 'Made for the 30days js challenge',
+    madefor: 'Made for the JavaScript 30 challenge',
     usefor: 'Product info page, Campaign or orginisational website. This template uses a classic segmented format to encourage continous scrolling and rapid information transfer.',
     offsiteURL: 'https://oddert-30-days-js.glitch.me/24.%20Sticky%20Nav%20Bar',
     onsiteURL: null,
