@@ -22,10 +22,12 @@
             <img src="<%= each.thumbnail %>" alt="<%= each.title %> banner image thumbnail.">
           </div>
             <div class="site__details">
-              <h3 class="site__title">
-                <span><%= each.title %></span>
-              </h3>
-              <p class="site__subtitle"><%= each.subtitle %></p>
+              <div class="site__details--container">
+                <h3 class="site__title">
+                  <span><%= each.title %></span>
+                </h3>
+                <p class="site__subtitle"><%= each.subtitle %></p>
+              </div>
             </div>
           </a>
         </div>

@@ -84,14 +84,23 @@ a:active, a :visited {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-around;
 }
-.sites .site a .site__details .site__title {
+.sites .site a .site__details .site__details--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+}
+.sites .site a .site__details .site__details--container .site__title {
   color: #fefdeb;
   transition: all 0.3s ease;
   text-shadow: 0px 0px 10px black;
@@ -101,12 +110,13 @@ a:active, a :visited {
   width: 100%;
   text-align: left;
 }
-.sites .site a .site__details .site__title span {
+.sites .site a .site__details .site__details--container .site__title span {
   display: table;
   margin: 0 auto 0 6px;
   transition: all 0.3s ease;
+  word-break: break-all;
 }
-.sites .site a .site__details .site__subtitle {
+.sites .site a .site__details .site__details--container .site__subtitle {
   flex: 1;
   transition: 0.3s ease;
   color: #fefdeb;
@@ -117,18 +127,18 @@ a:active, a :visited {
   transform: translateY(200%);
   white-space: pre-line;
 }
-.sites .site a .site__details:hover {
+.sites .site a .site__details .site__details--container:hover {
   background: linear-gradient(0deg, rgba(1, 1, 1, 0.85), rgba(1, 1, 1, 0.55));
 }
-.sites .site a .site__details:hover .site__title {
+.sites .site a .site__details .site__details--container:hover .site__title {
   text-shadow: none;
   margin: 18px 0px 0px 0px;
 }
-.sites .site a .site__details:hover .site__title span {
+.sites .site a .site__details .site__details--container:hover .site__title span {
   margin-left: 50%;
   transform: translateX(-50%);
 }
-.sites .site a .site__details:hover .site__subtitle {
+.sites .site a .site__details .site__details--container:hover .site__subtitle {
   text-shadow: none;
   transform: translateY(0%);
 }

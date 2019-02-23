@@ -34,7 +34,7 @@ const sites = [
   {
     local: false,
     title: 'Cyclemonlongtiltleaaaaaaaaaaa',
-    subtitle: 'Sample site not designed by oddert co. plz no sue',
+    subtitle: 'Sample site not designed by oddert co. plz no sue. A site representing the public-facing side of a scientific project. The page aims to make the large and complex effort accessible whilst transmitting necessary information.',
     description: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
     date: 'Nov 2017',
     type: 'Static Page',
@@ -110,6 +110,22 @@ const sites = [
     thumbnail: 'https://file.mockplus.com/image/2018/02/7525bad1-c663-47ee-8c69-a0d49adef7ae.png',
     classInserts: 'vertical',
     _id: 'ON4ohnRHbD'
+  },
+  {
+    local: false,
+    title: 'NGEM Network Site',
+    subtitle: 'A site representing the public-facing side of a scientific project. The page aims to make the large and complex effort accessible whilst transmitting necessary information. The page must also invigorate and enthusiast onlookers with an important call-to-action.',
+    description: 'NGEM stands for “Network for Global Ecological Modelling”, a hypothetical platform, software and network to bring together scientist in a range of fields to combine digital environmental simulations and models along with data sources.\r\n\r\n Environmental models are abstract datasets describing how a system in nature, such as a species lifecycle or ecosystem operates.\r\n\r\n This was intended as a long term project providing resources to participants with the end goal of creating a digital model for the simulation of the entire world’s ecosystem.',
+    date: 'Nov 2017',
+    type: 'Static Page',
+    pages: '1',
+    madefor: 'Made for the \'Bigger Picture\' project at university; a cross-disciplinary exercise with over 500 students to explore a topic of choice and design an outcome.',
+    usefor: 'Product info page, Campaign or orginisational website. This template uses a classic segmented format to encourage continous scrolling and rapid information transfer.',
+    offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
+    onsiteURL: null,
+    thumbnail: 'https://lh3.googleusercontent.com/9Yd-wZpkVlvQcIi5FSvxgyA-XwWi6TtXQ6zLvZipsckx-pXj8MrDQQlhC1tTp1Ez3PDTk1R1fWnOJ9LNeOL1kcQmndO_f7pxPbA2zjfPdds6kbJfVBOFQ9DvhWV1OHix9mkEYyIt1ZOBnzToU6-Xp81kFKbM1Z0rVvIO879VMHGtCcyiRoTJNxbw8GbUp_tJXxDRzLcRmF3XvJBc8dul-EBxhY0ERcDbTHsVUoFQyOYSy1AIXnoS8H3G4jPP_Vln5Ro0_eaEJYVRxdyYlrj5BWgf4x2oS4pj-RorZ0hqrlIBM9nL2h0jNdWFSVlV4x00U3fh6u_5nPmIhFD-5QkwGIlGAybtMmN9S1-zNwd9W0F7Td5djUsjm5QHdQgdhYKI2TxbAV1wiLgYWVzTazVwj2ZAoBlPspx7mKADwe1-uayfeQUSIEmzltZdszjF-c_gWNkVheR4VFeHmT3SOkXzH4SjszVihf_nakoR0GQskfEospx7JUoANnzBLRu4bTM95uXVDdF7ny4W_cu6FxWntEqVZkuQReAqDZtIzai-BAS2NqbIrTXQ0kpDov5VaJGJwpnGkCQnuyCALkkbwOOBFqRxaPSjqJ5MCY14CxN6TwVFHul5EkO1-BDmrAbcY1OSgBIP6KDg1BhaQoOx-CTkSVoabQ=w1926-h1014-no',
+    classInserts: 'horizontal',
+    _id: 'in2498thyo'
   },
 ]
 
