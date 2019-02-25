@@ -85,15 +85,15 @@ function toggleFullScreenUI (e, show=true) {
 function scrollDetection (e, site) {
   const parent = site.querySelector('.site__details')
   const child = site.querySelector('.site__details--container')
-  console.log(parent.scrollHeight, child.scrollHeight)
+  // console.log(parent.scrollHeight, child.scrollHeight)
   if (parent.scrollHeight < child.scrollHeight) {
-    console.log('will scroll')
+    // console.log('will scroll')
     parent.classList.add('scrollable')
   } else {
-    console.log('no scroll')
+    // console.log('no scroll')
     parent.classList.remove('scrollable')
   }
-  console.log(parent)
+  // console.log(parent)
 }
 
 allSites.forEach(each =>
@@ -106,7 +106,7 @@ allSites.forEach(each => {
   each.addEventListener('mouseover', e => {
     e.stopPropagation()
     hovering = true
-    console.log(each)
+    // console.log(each)
     setTimeout(() => {
       if (hovering) scrollDetection(e, each)
     }, 500)
