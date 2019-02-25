@@ -80,8 +80,32 @@ function toggleFullScreenUI (e, show=true) {
   else fullScreenImageClose.classList.add('view_hide')
 }
 
-function scrollDetection (e) {
-  const parent e.target
+// function transitionEndDetect (elem) {
+//   const transitions = {
+//     'transition':'transitionend',
+//     'OTransition':'oTransitionEnd',
+//     'MozTransition':'transitionend',
+//     'WebkitTransition':'webkitTransitionEnd'
+//   }
+//   for (let t in transitions) {
+//     if (elem.style[t] !== undefined) return transitions[t]
+//   }
+// }
+//
+// function ahhhh (e) {
+//   let transitionEvent = transitionEndDetect()
+//   transitionEvent && e.addEventListener(transitionEvent, () => console.log('animation ended'))
+// }
+
+function scrollDetection (e, site) {
+  const parent = site.querySelector('.site__details')
+  const child = site.querySelector('.site__details--container')
+  console.log(parent.scrollHeight, child.scrollHeight)
+  if (parent.scrollHeight < child.scrollHeight) {
+    console.log('will scroll')
+  } else {
+    console.log('no scroll')
+  }
 }
 
 allSites.forEach(each =>
@@ -91,11 +115,14 @@ allSites.forEach(each =>
 allSites.forEach(each => {
   each.addEventListener('mouseover', e => {
     e.stopPropagation()
-    scrollDetection(e)
+    console.log(each)
+    scrollDetection(e, each)
   }, {
     capture: true
   })
 })
+
+// allSites.forEach(each => each.addEventListener('mouseover', ahhhh))
 
 detailsWindowImageLink.addEventListener('click', () => toggleFullScreenImage(null, true))
 fullScreenImageClose.addEventListener('click', () => toggleFullScreenImage(null, false)) //() => console.log('wejkguilweerhrtktylotui;puo #ThanksGraham')
