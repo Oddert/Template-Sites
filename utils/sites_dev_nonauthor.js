@@ -81,22 +81,6 @@ const sites = [
   },
   {
     local: false,
-    title: 'Climber',
-    subtitle: 'Sample site not designed by oddert co. plz no sue',
-    description: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
-    date: 'Nov 2017',
-    type: 'Static Page',
-    pages: '1',
-    madefor: 'Made for the \'Bigger Picture\' project at university; a cross-disciplinary exercise with over 500 students to explore a topic of choice and design an outcome.',
-    usefor: 'Product info page, Campaign or orginisational website. This template uses a classic segmented format to encourage continous scrolling and rapid information transfer.',
-    offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
-    onsiteURL: null,
-    thumbnail: 'https://file.mockplus.com/image/2018/02/8ad129ae-4629-420a-b57b-cedd8564ee6f.png',
-    classInserts: 'horizontal',
-    _id: 'MvmN49r3cn'
-  },
-  {
-    local: false,
     title: 'Alex Buga',
     subtitle: 'Sample site not designed by oddert co. plz no sue',
     description: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
@@ -110,6 +94,22 @@ const sites = [
     thumbnail: 'https://file.mockplus.com/image/2018/02/7525bad1-c663-47ee-8c69-a0d49adef7ae.png',
     classInserts: 'vertical',
     _id: 'ON4ohnRHbD'
+  },
+  {
+    local: false,
+    title: 'Climber',
+    subtitle: 'Sample site not designed by oddert co. plz no sue',
+    description: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah',
+    date: 'Nov 2017',
+    type: 'Static Page',
+    pages: '1',
+    madefor: 'Made for the \'Bigger Picture\' project at university; a cross-disciplinary exercise with over 500 students to explore a topic of choice and design an outcome.',
+    usefor: 'Product info page, Campaign or orginisational website. This template uses a classic segmented format to encourage continous scrolling and rapid information transfer.',
+    offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
+    onsiteURL: null,
+    thumbnail: 'https://file.mockplus.com/image/2018/02/8ad129ae-4629-420a-b57b-cedd8564ee6f.png',
+    classInserts: 'horizontal',
+    _id: 'MvmN49r3cn'
   },
   {
     local: false,
