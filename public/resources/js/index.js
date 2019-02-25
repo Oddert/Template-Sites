@@ -80,9 +80,22 @@ function toggleFullScreenUI (e, show=true) {
   else fullScreenImageClose.classList.add('view_hide')
 }
 
+function scrollDetection (e) {
+  const parent e.target
+}
+
 allSites.forEach(each =>
   each.addEventListener('click', handleDetails, { capture: true })
 )
+
+allSites.forEach(each => {
+  each.addEventListener('mouseover', e => {
+    e.stopPropagation()
+    scrollDetection(e)
+  }, {
+    capture: true
+  })
+})
 
 detailsWindowImageLink.addEventListener('click', () => toggleFullScreenImage(null, true))
 fullScreenImageClose.addEventListener('click', () => toggleFullScreenImage(null, false)) //() => console.log('wejkguilweerhrtktylotui;puo #ThanksGraham')
