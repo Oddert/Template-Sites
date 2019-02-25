@@ -80,22 +80,7 @@ function toggleFullScreenUI (e, show=true) {
   else fullScreenImageClose.classList.add('view_hide')
 }
 
-// function transitionEndDetect (elem) {
-//   const transitions = {
-//     'transition':'transitionend',
-//     'OTransition':'oTransitionEnd',
-//     'MozTransition':'transitionend',
-//     'WebkitTransition':'webkitTransitionEnd'
-//   }
-//   for (let t in transitions) {
-//     if (elem.style[t] !== undefined) return transitions[t]
-//   }
-// }
-//
-// function ahhhh (e) {
-//   let transitionEvent = transitionEndDetect()
-//   transitionEvent && e.addEventListener(transitionEvent, () => console.log('animation ended'))
-// }
+// ========== Bellow scrollable detection is very messy (needs debouncing) but does work for the now  ==========
 
 function scrollDetection (e, site) {
   const parent = site.querySelector('.site__details')
@@ -103,24 +88,34 @@ function scrollDetection (e, site) {
   console.log(parent.scrollHeight, child.scrollHeight)
   if (parent.scrollHeight < child.scrollHeight) {
     console.log('will scroll')
+    parent.classList.add('scrollable')
   } else {
     console.log('no scroll')
+    parent.classList.remove('scrollable')
   }
+  console.log(parent)
 }
 
 allSites.forEach(each =>
   each.addEventListener('click', handleDetails, { capture: true })
 )
 
+let hovering = false
+
 allSites.forEach(each => {
   each.addEventListener('mouseover', e => {
     e.stopPropagation()
+    hovering = true
     console.log(each)
-    scrollDetection(e, each)
+    setTimeout(() => {
+      if (hovering) scrollDetection(e, each)
+    }, 500)
   }, {
     capture: true
   })
 })
+
+allSites.forEach(each => each.addEventListener('mouseout', () => hovering = false))
 
 // allSites.forEach(each => each.addEventListener('mouseover', ahhhh))
 

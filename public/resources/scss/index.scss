@@ -132,8 +132,8 @@ a {
 
 
             & .site__title {
-              position: relative;
-              animation: scroll 10s linear 0s infinite;
+              // position: relative;
+              // animation: scroll 10s linear 0s infinite;
               text-shadow: none;
               margin: 18px 0px 0px 0px;
               & span {
@@ -142,8 +142,8 @@ a {
               }
             }
             & .site__subtitle {
-              position: relative;
-              animation: scroll 10s linear 0s infinite;
+              // position: relative;
+              // animation: scroll 10s linear 0s infinite;
               text-shadow: none;
               transform: translateY(0%);
             }
@@ -164,6 +164,14 @@ a {
           }
           100% {
             top: 0;
+          }
+        }
+        &.scrollable {
+          & .site__details--container:hover {
+            & .site__title, .site__subtitle {
+              position: relative;
+              animation: scroll 10s linear 0s infinite;
+            }
           }
         }
       }

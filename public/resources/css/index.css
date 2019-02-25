@@ -131,8 +131,6 @@ a:active, a :visited {
   background: linear-gradient(0deg, rgba(1, 1, 1, 0.85), rgba(1, 1, 1, 0.55));
 }
 .sites .site a .site__details .site__details--container:hover .site__title {
-  position: relative;
-  animation: scroll 10s linear 0s infinite;
   text-shadow: none;
   margin: 18px 0px 0px 0px;
 }
@@ -141,8 +139,6 @@ a:active, a :visited {
   transform: translateX(-50%);
 }
 .sites .site a .site__details .site__details--container:hover .site__subtitle {
-  position: relative;
-  animation: scroll 10s linear 0s infinite;
   text-shadow: none;
   transform: translateY(0%);
 }
@@ -162,6 +158,10 @@ a:active, a :visited {
   100% {
     top: 0;
   }
+}
+.sites .site a .site__details.scrollable .site__details--container:hover .site__title, .sites .site a .site__details.scrollable .site__details--container:hover .site__subtitle {
+  position: relative;
+  animation: scroll 10s linear 0s infinite;
 }
 .sites .site a .site_thumb {
   overflow: hidden;
