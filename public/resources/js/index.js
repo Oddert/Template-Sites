@@ -1,6 +1,9 @@
 
 const allSites = document.querySelectorAll('.site')
 
+const main                        = document.querySelector('.main')
+const siteContainer               = document.querySelector('.sites')
+
 const detailsWindow               = document.querySelector('.details_window__container')
 const detailsWindowButton         = detailsWindow.querySelector('.details_window--close')
 const detailsWindowTitle          = detailsWindow.querySelector('.details_window__title')
@@ -22,6 +25,9 @@ const detailsWindowTablePotential = detailsWindowTable.querySelector('.details_w
 const fullScreenImage             = document.querySelector('.fullScreenImage')
 const fullScreenImageSrc          = fullScreenImage.querySelector('a img')
 const fullScreenImageClose        = fullScreenImage.querySelector('.fullScreenImage__close')
+
+const control                     = document.querySelector('.control__buttons')
+const controlButtons              = control.querySelectorAll('button')
 
 let sites = []
 
@@ -80,6 +86,14 @@ function toggleFullScreenUI (e, show=true) {
   else fullScreenImageClose.classList.add('view_hide')
 }
 
+function changeDisplayStyle (e) {
+  const controlTypes = ['control-masonry', 'control-grid', 'control-details']
+  if (controlTypes.includes(e.target.className)) {
+    siteContainer.classList.remove(...controlTypes)
+    siteContainer.classList.add(e.target.className)
+  }
+}
+
 // ========== Bellow scrollable detection is very messy (needs debouncing) but does work for the now  ==========
 
 function scrollDetection (e, site) {
@@ -130,5 +144,7 @@ fullScreenImage.addEventListener('mouseleave', () => toggleFullScreenUI(null, fa
 detailsWindow.addEventListener('click', e => {
   if (e.target.className === 'details_window__container') toggledetailsWindow(null, false)
 })
+
+controlButtons.forEach(each => each.onclick = changeDisplayStyle)
 
 detailsWindowButton.onclick = toggledetailsWindow
