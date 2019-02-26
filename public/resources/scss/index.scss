@@ -8,7 +8,7 @@ body, html {
   box-sizing: border-box;
 }
 
-body {
+.main {
   padding: 0px 20px;
 }
 
@@ -379,6 +379,31 @@ a {
       transform: scale(1.07);
       color: #D5DADC;
       text-shadow: 1px 1px 8px rgba(0,0,0,1);
+    }
+  }
+}
+
+footer {
+  margin-top: 50px;
+  .footer_main {
+    padding: 20px;
+    box-shadow: 0px -15px 20px rgba(1,1,1,.1);
+    box-sizing: border-box;
+    h4, h5 {
+      color: #333;
+      text-align: center;
+      font-weight: 500;
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      margin: 10px 0;
+    }
+    h4 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    h5, i {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 15px;
     }
   }
 }

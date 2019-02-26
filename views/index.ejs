@@ -8,87 +8,95 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   </head>
   <body>
-    <h1 class="main__title">Robyn Veitch | Template Sites</h1>
-    <h2 class="main__description">Shown here are a series of sites, apps and single web pages to be ‘real’ websites and layout templates, whilst the <a href="https://oddert.github.io/#code_anchor">other projects</a> focus on a particular function and not necessarily a full user facing experience.</h2>
-    <div class="sites">
-      <% sites.forEach(each => { %>
-        <div class="site <%= each.classInserts ? each.classInserts : 'small' %>" title="<%= each.title %>" data-id="<%= each._id %>">
-          <!-- <a href="<%= each.local ? each.onsiteURL : each.offsiteURL %>"> -->
-          <a>
-            <figure class="site_background">
-              <img src="<%= each.thumbnail %>" alt="<%= each.title %> banner image thumbnail.">
-            </figure>
-            <div class="site_thumb">
-            <img src="<%= each.thumbnail %>" alt="<%= each.title %> banner image thumbnail.">
-          </div>
-            <div class="site__details">
-              <div class="site__details--container">
-                <h3 class="site__title">
-                  <span><%= each.title %></span>
-                </h3>
-                <p class="site__subtitle"><%= each.subtitle %></p>
+    <div class="main">
+      <h1 class="main__title">Robyn Veitch | Template Sites</h1>
+      <h2 class="main__description">Shown here are a series of sites, apps and single web pages to be ‘real’ websites and layout templates, whilst the <a href="https://oddert.github.io/#code_anchor">other projects</a> focus on a particular function and not necessarily a full user facing experience.</h2>
+      <div class="sites">
+        <% sites.forEach(each => { %>
+          <div class="site <%= each.classInserts ? each.classInserts : 'small' %>" title="<%= each.title %>" data-id="<%= each._id %>">
+            <!-- <a href="<%= each.local ? each.onsiteURL : each.offsiteURL %>"> -->
+            <a>
+              <figure class="site_background">
+                <img src="<%= each.thumbnail %>" alt="<%= each.title %> banner image thumbnail.">
+              </figure>
+              <div class="site_thumb">
+                <img src="<%= each.thumbnail %>" alt="<%= each.title %> banner image thumbnail.">
               </div>
-            </div>
-          </a>
-        </div>
-      <% }) %>
-    </div>
-    <div class="details_window__container no_show">
-      <div>
-        <div class="details_window">
-          <button class="details_window--close">✖</button>
-          <a href="" class="details_window__title">
-            <h2 class="details_window__title--text">No title Selected</h2>
-          </a>
-          <a class="details_window__image--link">
-            <img class="details_window__image" src="" alt="" />
-          </a>
-          <div class="details_window__desc">
-            <h3 class="details_window__desc--subtitle">No Description yet</h3>
-            <p class="details_window__desc--description">No Description yet</p>
-          </div>
-          <div class="details_window__link">
-            <a href="#">
-              <p></p><i class="fa fa-external-link-alt fa-sm"></i>
+              <div class="site__details">
+                <div class="site__details--container">
+                  <h3 class="site__title">
+                    <span><%= each.title %></span>
+                  </h3>
+                  <p class="site__subtitle"><%= each.subtitle %></p>
+                </div>
+              </div>
             </a>
           </div>
-          <div class="details_window__table">
-            <table>
-              <!-- <tr>
-                <th>Value</th>
-                <th>Description</th>
-              </tr> -->
-              <tr>
-                <td title="What technology or style does this represent. What might the template be used for.">Use Case</td>
-                <td class="details_window__table--potential"></td>
-              </tr>
-              <tr>
-                <td>Application Type</td>
-                <td class="details_window__table--type"></td>
-              </tr>
-              <tr>
-                <td>Date</td>
-                <td class="details_window__table--date"></td>
-              </tr>
-              <tr>
-                <td>Pages</td>
-                <td class="details_window__table--pages"></td>
-              </tr>
-              <tr>
-                <td title="Context of its design. e.g. Made for x client, Made for x purpose etc.">Made for</td>
-                <td class="details_window__table--purpose"></td>
-              </tr>
-            </table>
+          <% }) %>
+        </div>
+        <div class="details_window__container no_show">
+          <div>
+            <div class="details_window">
+              <button class="details_window--close">✖</button>
+              <a href="" class="details_window__title">
+                <h2 class="details_window__title--text">No title Selected</h2>
+              </a>
+              <a class="details_window__image--link">
+                <img class="details_window__image" src="" alt="" />
+              </a>
+              <div class="details_window__desc">
+                <h3 class="details_window__desc--subtitle">No Description yet</h3>
+                <p class="details_window__desc--description">No Description yet</p>
+              </div>
+              <div class="details_window__link">
+                <a href="#">
+                  <p></p><i class="fa fa-external-link-alt fa-sm"></i>
+                </a>
+              </div>
+              <div class="details_window__table">
+                <table>
+                  <!-- <tr>
+                  <th>Value</th>
+                  <th>Description</th>
+                </tr> -->
+                <tr>
+                  <td title="What technology or style does this represent. What might the template be used for.">Use Case</td>
+                  <td class="details_window__table--potential"></td>
+                </tr>
+                <tr>
+                  <td>Application Type</td>
+                  <td class="details_window__table--type"></td>
+                </tr>
+                <tr>
+                  <td>Date</td>
+                  <td class="details_window__table--date"></td>
+                </tr>
+                <tr>
+                  <td>Pages</td>
+                  <td class="details_window__table--pages"></td>
+                </tr>
+                <tr>
+                  <td title="Context of its design. e.g. Made for x client, Made for x purpose etc.">Made for</td>
+                  <td class="details_window__table--purpose"></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
+      <div class="fullScreenImage no_show">
+        <a>
+          <img src="https://raw.githubusercontent.com/Oddert/30-days-js/master/screenshots/24.%20Sticky%20Nav%20Bar.PNG" alt="" />
+        </a>
+        <button class="fullScreenImage__close">✖</button>
+      </div>
     </div>
-    <div class="fullScreenImage no_show">
-      <a>
-        <img src="https://raw.githubusercontent.com/Oddert/30-days-js/master/screenshots/24.%20Sticky%20Nav%20Bar.PNG" alt="" />
-      </a>
-      <button class="fullScreenImage__close">✖</button>
-    </div>
+    <footer>
+      <div class="footer_main">
+        <h4>Webpage designed and built by <a target="_blank" href="https://www.linkedin.com/in/robert-veitch-582aa3b6/">Robyn Veitch</a>.</h4>
+        <h5><i class="fa fa-copyright"></i> Copyright 2019 All rights reserved.</h5>
+      </div>
+    </footer>
   </body>
   <script type="text/javascript" src="/resources/js/index.js"></script>
 </html>
