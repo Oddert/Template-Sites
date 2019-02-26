@@ -503,21 +503,35 @@ footer {
       height: 35px;
       margin: 0;
       padding: 0;
+      cursor: pointer;
+      transition: .1s linear;
+      .icon-control-1 {
+        transition: .1s linear;
+        fill: #3c97d3;
+      }
+      .icon-control-2 {
+        transition: .1s linear;
+        fill: none;
+        stroke: #297fb9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    }
+    &:hover {
+      svg {
+        .icon-control-1 {
+          fill: #2a81bb;
+        }
+        .icon-control-2 {
+          stroke: #1c567d;
+        }
+      }
     }
   }
 }
 
-.icon-control-1 {
-  fill: #3c97d3;
-}
 
-.icon-control-2 {
-  fill: none;
-  stroke: #297fb9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2px;
-}
 
 .no_show {
   display: none;
