@@ -219,12 +219,13 @@ a:active, a :visited {
 .sites.control-details {
   padding-top: 20px;
   padding-bottom: 20px;
+  grid-gap: 12px;
 }
 .sites.control-details .site {
   grid-column: span 2;
   grid-row: span 1;
   border: none;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .sites.control-details .site:hover {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
@@ -295,7 +296,7 @@ a:active, a :visited {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.35);
 }
 .details_window__container .details_window {
   margin: 10vh 0;
@@ -452,6 +453,35 @@ footer .footer_main h5, footer .footer_main i {
   font-weight: 500;
   font-size: 14px;
   line-height: 15px;
+}
+
+.control__buttons {
+  display: flex;
+}
+.control__buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.control__buttons button svg {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-control-1 {
+  fill: #3c97d3;
+}
+
+.icon-conrtol-2 {
+  fill: none;
+  stroke: #297fb9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
 }
 
 .no_show {
