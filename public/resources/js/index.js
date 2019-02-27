@@ -88,9 +88,15 @@ function toggleFullScreenUI (e, show=true) {
 
 function changeDisplayStyle (e) {
   const controlTypes = ['control-masonry', 'control-grid', 'control-details']
-  if (controlTypes.includes(e.target.className)) {
+  const targetType = e.target.closest('button').name
+  console.log({ targetType })
+  if (controlTypes.includes(targetType)) {
     siteContainer.classList.remove(...controlTypes)
-    siteContainer.classList.add(e.target.className)
+    siteContainer.classList.add(targetType)
+    controlButtons.forEach(each => {
+      if (each.classList.contains(targetType)) each.classList.add('active')
+      else each.classList.remove('active')
+    })
   }
 }
 

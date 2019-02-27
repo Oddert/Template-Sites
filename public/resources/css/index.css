@@ -55,6 +55,8 @@ a:active, a :visited {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 180px;
   padding: 0px 0px 30px 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .sites .site {
   border: 1px solid #bec3c7;
@@ -217,8 +219,6 @@ a:active, a :visited {
   grid-row: span 1;
 }
 .sites.control-details {
-  padding-top: 20px;
-  padding-bottom: 20px;
   grid-gap: 12px;
 }
 .sites.control-details .site {
@@ -468,6 +468,9 @@ footer .footer_main h5, footer .footer_main i {
   border: none;
   background: rgba(0, 0, 0, 0);
   margin-right: 15px;
+  padding: 5px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 4px;
 }
 .control__buttons button svg {
   width: 35px;
@@ -490,10 +493,25 @@ footer .footer_main h5, footer .footer_main i {
   stroke-width: 3px;
 }
 .control__buttons button:hover svg .icon-control-1 {
-  fill: #2a81bb;
+  fill: #59a6d9;
 }
 .control__buttons button:hover svg .icon-control-2 {
-  stroke: #1c567d;
+  stroke: #2e90d1;
+}
+.control__buttons button.active {
+  border: 2px solid #206592;
+}
+.control__buttons button.active svg .icon-control-1 {
+  fill: #2a81bb;
+}
+.control__buttons button.active svg .icon-control-2 {
+  stroke: #206592;
+}
+.control__buttons button.active:hover svg .icon-control-1 {
+  fill: #59a6d9;
+}
+.control__buttons button.active:hover svg .icon-control-2 {
+  stroke: #2e90d1;
 }
 
 .no_show {
