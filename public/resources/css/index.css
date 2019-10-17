@@ -30,6 +30,7 @@ a:active, a :visited {
   box-sizing: border-box;
   border-radius: 20px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 38px rgba(0, 0, 0, 0.15), 0 7px 12px rgba(0, 0, 0, 0.11);
   font-weight: 800;
   font-family: "Poiret One", "Josefin Sans", arial;
   font-size: 36px;
