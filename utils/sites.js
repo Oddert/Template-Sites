@@ -11,7 +11,7 @@ const sites = [
     usefor: 'Product info page, Campaign or orginisational website. This template uses a classic segmented format to encourage continous scrolling and rapid information transfer.',
     offsiteURL: 'https://oddert.github.io/msc/bigger_picture/',
     onsiteURL: null,
-    thumbnail: 'https://lh3.googleusercontent.com/NJJfHlw1wPWhmZRz1rVs0ZsMKq8eOLXcRQa0pnqsTZmGIZ6J9HcWeDWasWRtV2hLJo79HYN4-K5J7Mbig75XW1cTtjoLYziRqGOcVDTgQjdI4OL-5nnLg1TqRxpx1IFOW7EScAKYbkZ6WNabGCM61ypLn0ZvkF26FoGp65wYmonQE3s_wtzncX0JaOFddkIIoie7FF3cL1O8XDwCMya4GqhUDAMHDbDijsTP1OeNnOj3kuGnUbf7vR9pZLeTjNvsm3iMqy_QCwQ3Zk7vT2ptBsORKsCgzWt26N_P-FA1Zd4Fmsla1aWavL1AzAJ8wJDi5quvp_ECHzHmhTHasPiAxHA1p3XPlGxm2d1BMUNwbk6aW6daueBtEwYRatPscsaDNRakiYKIyCmKWkMDQ7478sVhu8c20l7uUnfNE_AjdxsHhTmUgMrKCfampHru8AznQ-LqhFUgX8Vsmuo5p9rX9P4Qtv9-ScNYTLJR1VoG0zV8_VtGGtE4Ud8yBJKMx5VS6xcj_aWbrESXPycre_RqrS6NB_HsdItzuS_JYTcerqVXF4d2qzGSSwpONIC_78af8yEiqoeq6RpYUYTDwhrGlwu3ePROths_4WS-EM7y_IP1pYRnXZsd2k7lIqU41L-fgHoBuwBquRpL4YHRjMeeC4VUQw=w1902-h975-no',
+    thumbnail: 'https://res.cloudinary.com/oddert/image/upload/v1571337546/Portfolio/ngem_banner_1.jpg',
     classInserts: 'large',
     _id: 'in2498thyo'
   },
