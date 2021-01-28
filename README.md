@@ -1,7 +1,7 @@
 # Robyn Veitch | Site Templates
 
 ## Live Host
-[https://oddert-chess-game-1.glitch.me/](https://oddert-chess-game-1.glitch.me/)
+[https://oddert-template-sites.glitch.me/](https://oddert-template-sites.glitch.me/)
 
 ## Installation
 ```
