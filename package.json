@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/Oddert/Template-Sites#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
